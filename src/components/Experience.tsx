@@ -51,20 +51,9 @@ export default function Experience() {
 
         <div className="h-1 w-24 bg-gradient-to-r from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] mx-auto mb-12 rounded-full"></div>
 
-        <div className="relative">
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF]"></div>
-
+        <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className={`relative mb-12 ${
-                index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2 md:ml-auto'
-              }`}
-            >
-              <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[#005CFF] dark:bg-[#00E1FF] rounded-full -ml-2 shadow-[0_0_20px_rgba(0,225,255,0.5)] z-10"></div>
-
-              <div className={`ml-20 md:ml-0 ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}>
-                <div className="bg-white/80 dark:bg-[#082B70]/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 dark:border-[#00E1FF]/20 shadow-xl hover:shadow-[0_0_40px_rgba(0,225,255,0.3)] hover:scale-105 transition-all duration-500">
+            <div key={index} className="bg-white/80 dark:bg-[#082B70]/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 dark:border-[#00E1FF]/20 shadow-xl hover:shadow-[0_0_40px_rgba(0,225,255,0.3)] hover:scale-105 transition-all duration-500">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-3 bg-gradient-to-br from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] rounded-xl">
                       <Briefcase className="w-6 h-6 text-white" />
@@ -93,8 +82,6 @@ export default function Experience() {
                     ))}
                   </ul>
                 </div>
-              </div>
-            </div>
           ))}
         </div>
       </div>
