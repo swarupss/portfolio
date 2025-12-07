@@ -38,8 +38,8 @@ export const links = {
 
 // About Section
 export const aboutData = {
-  paragraphs: [
-    'I am a results-driven Data Engineer with over 4.3 years of experience designing scalable data pipelines, optimizing ETL workflows, and implementing cloud-based data transformation solutions across diverse sectors including healthcare, aviation, and FMCG. With expertise in Informatica PowerCenter, IICS, Azure Data Factory, Azure Databricks, Apache Spark, SQL, Hadoop, and advanced warehousing models, I specialize in building reliable, high-performance data systems that drive impactful business decisions.',
+  getDescription: (years: number) => [
+    `I am a results-driven Data Engineer with over ${years} years of experience designing scalable data pipelines, optimizing ETL workflows, and implementing cloud-based data transformation solutions across diverse sectors including healthcare, aviation, and FMCG. With expertise in Informatica PowerCenter, IICS, Azure Data Factory, Azure Databricks, Apache Spark, SQL, Hadoop, and advanced warehousing models, I specialize in building reliable, high-performance data systems that drive impactful business decisions.`,
     'I am passionate about automation, performance engineering, scalable architecture, and enabling organizations to unlock the true potential of their data.'
   ],
   specialties: [

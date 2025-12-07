@@ -1,7 +1,8 @@
 import { Code2, Database, Cloud } from 'lucide-react';
-import { aboutData } from '../data/manageData';
+import { aboutData, calculateYearsOfExperience } from '../data/manageData';
 
 export default function About() {
+  const yearsOfExperience = calculateYearsOfExperience();
   return (
     <section id="about" className="py-20 bg-white dark:bg-[#020B24]">
       <div className="max-w-6xl mx-auto px-6">
@@ -12,7 +13,7 @@ export default function About() {
         <div className="h-1 w-24 bg-gradient-to-r from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] mx-auto mb-12 rounded-full"></div>
 
         <div className="bg-white/50 dark:bg-[#082B70]/30 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-[#00E1FF]/20 shadow-xl hover:shadow-[0_0_40px_rgba(0,225,255,0.2)] transition-all duration-500 hover:scale-[1.02]">
-          {aboutData.paragraphs.map((paragraph, index) => (
+          {aboutData.getDescription(yearsOfExperience).map((paragraph, index) => (
             <p key={index} className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
               {paragraph}
             </p>
