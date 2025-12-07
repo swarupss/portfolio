@@ -1,19 +1,7 @@
 import { Award, Star, Trophy } from 'lucide-react';
+import { achievementsData } from '../data/manageData';
 
-const achievements = [
-  {
-    icon: Award,
-    title: 'Infosys Certified Informatica Developer',
-  },
-  {
-    icon: Star,
-    title: 'Nominated for Spot Award for IICS/IDMC optimization',
-  },
-  {
-    icon: Trophy,
-    title: 'Recognized for advancing data quality frameworks',
-  },
-];
+const icons = [Award, Star, Trophy];
 
 export default function Achievements() {
   return (
@@ -26,24 +14,27 @@ export default function Achievements() {
         <div className="h-1 w-24 bg-gradient-to-r from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] mx-auto mb-12 rounded-full"></div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {achievements.map((achievement, index) => (
-            <div
-              key={index}
-              className="group relative bg-white/80 dark:bg-[#082B70]/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 dark:border-[#00E1FF]/20 shadow-xl hover:shadow-[0_0_50px_rgba(0,225,255,0.5)] hover:scale-105 hover:-rotate-2 transition-all duration-500"
-            >
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                <achievement.icon className="w-8 h-8 text-white" />
-              </div>
+          {achievementsData.map((achievement, index) => {
+            const IconComponent = icons[index % icons.length];
+            return (
+              <div
+                key={index}
+                className="group relative bg-white/80 dark:bg-[#082B70]/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 dark:border-[#00E1FF]/20 shadow-xl hover:shadow-[0_0_50px_rgba(0,225,255,0.5)] hover:scale-105 hover:-rotate-2 transition-all duration-500"
+              >
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                  <IconComponent className="w-8 h-8 text-white" />
+                </div>
 
-              <div className="mt-8 text-center">
-                <p className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
-                  {achievement.title}
-                </p>
-              </div>
+                <div className="mt-8 text-center">
+                  <p className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
+                    {achievement.title}
+                  </p>
+                </div>
 
-              <div className="absolute inset-0 bg-gradient-to-br from-[#005CFF]/5 to-[#00C1FF]/5 dark:from-[#00E1FF]/5 dark:to-[#005CFF]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
-          ))}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#005CFF]/5 to-[#00C1FF]/5 dark:from-[#00E1FF]/5 dark:to-[#005CFF]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

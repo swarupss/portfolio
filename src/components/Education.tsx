@@ -1,22 +1,5 @@
 import { GraduationCap } from 'lucide-react';
-
-const education = [
-  {
-    year: '2013',
-    institute: 'Sri Aurobindo Integral Center of Education',
-    degree: '10th',
-  },
-  {
-    year: '2015',
-    institute: 'Jatiya Kabi Bira Kishore Govt. Junior College',
-    degree: '12th',
-  },
-  {
-    year: '2015–2019',
-    institute: 'Government College of Engineering, Keonjhar',
-    degree: 'B.Tech — Electrical Engineering',
-  },
-];
+import { educationData } from '../data/manageData';
 
 export default function Education() {
   return (
@@ -29,7 +12,7 @@ export default function Education() {
         <div className="h-1 w-24 bg-gradient-to-r from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] mx-auto mb-12 rounded-full"></div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {education.map((edu, index) => (
+          {educationData.map((edu, index) => (
             <div
               key={index}
               className="group relative h-64 perspective-1000"

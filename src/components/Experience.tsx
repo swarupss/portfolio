@@ -1,45 +1,5 @@
-import { Briefcase, CheckCircle } from 'lucide-react';
-
-const experiences = [
-  {
-    title: 'Data Engineer',
-    company: 'Deloitte USI',
-    period: '03/2025 – Present',
-    sector: 'Healthcare',
-    achievements: [
-      'Designed & optimized large-scale ETL pipelines using IDMC, IICS & PowerCenter',
-      'Built data ingestion using Azure Data Factory, Databricks & Spark',
-      'Reduced pipeline execution time by 30%',
-      'Implemented SCD Type-1 & Type-2 models for warehouse history tracking',
-      'Automated insights with Power BI dashboards',
-      'Refactored SQL resulting in performance improvements',
-    ],
-  },
-  {
-    title: 'ETL Developer',
-    company: 'TCS',
-    period: '04/2023 – 03/2025',
-    sector: 'Aviation',
-    achievements: [
-      'Developed & maintained 60+ Informatica ETL mappings',
-      'Improved ETL performance by 16%',
-      'Ensured 99.9% uptime with Autosys & Control-M scheduling',
-      'Achieved 98% data accuracy with validation frameworks',
-    ],
-  },
-  {
-    title: 'Software Engineer',
-    company: 'Infosys',
-    period: '07/2021 – 04/2023',
-    sector: 'FMCG',
-    achievements: [
-      'Migrated 100+ on-prem ETL jobs to IICS, reducing operations cost by 40%',
-      'Enhanced Spark-based processing improving performance by 35%',
-      'Designed reusable components reducing development effort by 40%',
-      'Led data migration achieving 99.5% success rate',
-    ],
-  },
-];
+import { CheckCircle } from 'lucide-react';
+import { experienceData } from '../data/manageData';
 
 export default function Experience() {
   return (
@@ -52,11 +12,11 @@ export default function Experience() {
         <div className="h-1 w-24 bg-gradient-to-r from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] mx-auto mb-12 rounded-full"></div>
 
         <div className="space-y-8">
-          {experiences.map((exp, index) => (
+          {experienceData.map((exp, index) => (
             <div key={index} className="bg-white/80 dark:bg-[#082B70]/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 dark:border-[#00E1FF]/20 shadow-xl hover:shadow-[0_0_40px_rgba(0,225,255,0.3)] hover:scale-105 transition-all duration-500">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-gradient-to-br from-[#005CFF] to-[#00C1FF] dark:from-[#00E1FF] dark:to-[#005CFF] rounded-xl">
-                      <Briefcase className="w-6 h-6 text-white" />
+                    <div className="w-16 h-16 p-2 bg-white dark:bg-white rounded-xl flex items-center justify-center">
+                      <img src={exp.companyLogo} alt={exp.company} className="w-full h-full object-contain" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{exp.title}</h3>
