@@ -98,7 +98,7 @@ export const skillsData = [
   {
     category: 'Databases',
     technologies: [
-      { name: 'Oracle', logo: 'https://toppng.com/uploads/preview/oracle-logo-115360039232wypouqbv7.png' },
+      { name: 'Oracle', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFcwTJmmxVBKmElB69dn8MwTej4VaPSiDsow&s' },
       { name: 'MySQL', logo: 'https://www.svgrepo.com/show/303251/mysql-logo.svg' },
       { name: 'SQL Server', logo: 'https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg' },
       { name: 'PostgreSQL', logo: 'https://www.svgrepo.com/show/354200/postgresql.svg' },
