@@ -58,7 +58,7 @@ export default function Experience() {
             <div
               key={index}
               className={`relative mb-12 ${
-                index % 2 === 0 ? 'md:pr-1/2 md:text-right' : 'md:pl-1/2 md:ml-auto'
+                index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2 md:ml-auto'
               }`}
             >
               <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[#005CFF] dark:bg-[#00E1FF] rounded-full -ml-2 shadow-[0_0_20px_rgba(0,225,255,0.5)] z-10"></div>

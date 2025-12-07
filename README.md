@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing data engineering expertise, built with React, TypeScript, and Tailwind CSS.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
+![Portfolio Preview]()
 ![React](https://img.shields.io/badge/React-18.3.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![Vite](https://img.shields.io/badge/Vite-Latest-purple)
