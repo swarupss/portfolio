@@ -33,7 +33,7 @@ export const contactInfo = {
 
 // Links
 export const links = {
-  cvLink: 'https://drive.google.com/file/d/1-Q4FGMv68Sw6g5CxpykacMdstpl-WeUQ/view?usp=drive_link',
+  cvLink: 'https://drive.google.com/file/d/1LUh3fsjBEPIl8SDdmiThoHHE4GoddBY0/view',
 };
 
 // About Section
