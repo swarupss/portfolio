@@ -67,6 +67,7 @@ export const skillsData = [
       { name: 'Informatica PowerCenter', logo: 'https://upload.wikimedia.org/wikipedia/en/d/d8/InformaticaLogo.png' },
       { name: 'IDMC/IICS', logo: 'https://upload.wikimedia.org/wikipedia/en/d/d8/InformaticaLogo.png' },
       { name: 'Apache NiFi', logo: 'https://icon-icons.com/download-file?file=https%3A%2F%2Fimages.icon-icons.com%2F2699%2FPNG%2F256%2Fapache_nifi_logo_icon_167863.png&id=167863&pack_or_individual=pack' },
+      { name: 'Java+C+++', logo: 'https://images.icon-icons.com/2699/PNG/512/java_horizontal_logo_icon_167858.png' },
     ]
   },
   {
